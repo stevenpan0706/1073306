@@ -1,14 +1,15 @@
 let mapArray,ctx,currentImgMain;
 let imgMountain,imgMain,imgEnemy;
 
-const gridLength=200;
+const gridLength=100;
 
 $(function()
 {
     mapArray=[
-        [0,1,1],
-        [0,0,0],
-        [3,1,2]
+        [0,1,1,0],
+        [0,0,0,0],
+        [0,1,0,1],
+        [3,1,2,1]
     ];
     ctx=$("#myCanvas")[0].getContext("2d");
     imgMain=new Image();
@@ -78,7 +79,7 @@ $(document).on("keydown",function(event)
         default:
             return;
     }
-    if(targetImg.x<=400 &&targetImg.x>=0&&targetImg.y<=400&&targetImg.y>=0){
+    if(targetImg.x<=600 &&targetImg.x>=0&&targetImg.y<=600&&targetImg.y>=0){
         targetBlock.x=targetImg.y/gridLength;
         targetBlock.y=targetImg.x/gridLength;
     }else{
@@ -112,7 +113,6 @@ $(document).on("keydown",function(event)
     {
         $("#talkBox").text("邊界");
     }
-
     ctx.drawImage(imgMain,cutImagePositionX,0,80,130,currentImgMain.x,currentImgMain.y,gridLength,gridLength);
 
 });

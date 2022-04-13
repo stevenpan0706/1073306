@@ -8,7 +8,7 @@ $(function(){
         $("#courseTable").append(
             "<tr>"+
             `<td>${x+1}</td>`+
-            `<td>${(new Date(startdate.getTime()+7*x*millisecsPerDay)).toLocaleDateString()}</td>`+
+            `<td>${(new Date(startdate.getTime()+7*x*millisecsPerDay)).toLocaleDateString().slice(5)}</td>`+
             `<td>${topic[x]}</td>`+
             "</tr>"
         );

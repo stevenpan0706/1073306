@@ -9,3 +9,5 @@ table{
 td{
     border-bottom: 1px solid blue;
 }
+tr:nth-child(even){background: red}
+tr:nth-child(odd){background: yellow}
